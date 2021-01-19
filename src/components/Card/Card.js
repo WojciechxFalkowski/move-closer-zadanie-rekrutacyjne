@@ -1,7 +1,8 @@
 import React from "react";
 import { CardWrapper, Title, Paragraph, DevicesNumber } from "./Card.css";
 import { SwitchButton } from "components";
-const Card = ({ id, title, text, devices, handleChange }) => {
+
+const Card = ({ id, title, text, devices, hangleChangeActiveDevices }) => {
   const isActiveRoom =
     devices.filter((device) => device.active && device.remoteControl).length > 0
       ? true
@@ -10,11 +11,11 @@ const Card = ({ id, title, text, devices, handleChange }) => {
     <CardWrapper>
       <Title>{title}</Title>
       <Paragraph>{text}</Paragraph>
-      <DevicesNumber href={`/${id}`}>{devices.length} Devices</DevicesNumber>
+      <DevicesNumber to={`/${id}`}>{devices.length} Devices</DevicesNumber>
       <SwitchButton
         isActiveRoom={isActiveRoom}
         id={id}
-        handleChange={handleChange}
+        hangleChangeActiveDevices={hangleChangeActiveDevices}
       />
     </CardWrapper>
   );

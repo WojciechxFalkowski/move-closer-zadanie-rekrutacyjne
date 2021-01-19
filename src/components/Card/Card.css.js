@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,7 +18,7 @@ export const Paragraph = styled.p`
   font-size: 14px;
   opacity: 0.5;
 `;
-export const DevicesNumber = styled.a`
+export const DevicesNumber = styled(Link)`
   color: ${({ theme }) => theme.colors.orange};
   font-weight: bold;
   font-size: 14px;

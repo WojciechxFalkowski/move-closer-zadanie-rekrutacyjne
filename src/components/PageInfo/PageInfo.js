@@ -10,7 +10,7 @@ import {
   MenuItem,
 } from "./PageInfo.css";
 import { AiOutlineSetting } from "react-icons/ai";
-const PageInfo = () => {
+const PageInfo = ({ title, text, menuItems }) => {
   const [isVisible, setIsVisible] = useState(false);
   const handleShowMenu = () => {
     setIsVisible(!isVisible);
@@ -18,15 +18,19 @@ const PageInfo = () => {
   return (
     <Wrapper>
       <ProfileWrapperInfo>
-        <H1>Hi Samuel</H1>
-        <Paragraph>Welcome to Home</Paragraph>
+        <H1>{title}</H1>
+        <Paragraph>{text}</Paragraph>
       </ProfileWrapperInfo>
       <SettingsWrapper>
         <Button onClick={handleShowMenu}>
           <AiOutlineSetting />
         </Button>
         <DropdownContent isVisible={isVisible}>
-          <MenuItem href="/new">Dodaj pokój</MenuItem>
+          {menuItems.map((menuItem) => (
+            <MenuItem key={menuItem.id} href={`/${menuItem.id}`}>
+              {menuItem.text}
+            </MenuItem>
+          ))}
         </DropdownContent>
       </SettingsWrapper>
     </Wrapper>
