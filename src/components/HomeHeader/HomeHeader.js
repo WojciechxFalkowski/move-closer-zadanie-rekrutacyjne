@@ -1,12 +1,12 @@
 import React from "react";
 import profileImage from "images/home/profile-image.jpg";
-import { Header, Img, H1, Paragraph } from "./HomeHeader.css";
+import { Header, Img } from "./HomeHeader.css";
+import { PageInfo } from "components";
 const HomeHeader = () => {
   return (
     <Header>
       <Img src={profileImage} alt="Profile face" />
-      <H1>Hi Samuel</H1>
-      <Paragraph>Welcome to Home</Paragraph>
+      <PageInfo />
     </Header>
   );
 };

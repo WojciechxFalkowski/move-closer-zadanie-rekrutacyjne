@@ -8,7 +8,9 @@ export default createGlobalStyle`
     margin-block-end: unset;
     padding-inline-start: unset;
     box-sizing:border-box;font-family:arial;
-    margin:unset;
+    margin:unset;background-color: unset;
+    border: unset;
+    padding: unset;
   }
   button
   {
