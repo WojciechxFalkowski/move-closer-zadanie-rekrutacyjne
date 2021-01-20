@@ -1,11 +1,13 @@
 import styled from "styled-components";
-export const Wrapper = styled.div`
-  display: flex;
+export const Container = styled.div`
   padding: ${({ theme }) => theme.spacing.mx}px;
   min-height: 100px;
   margin: ${({ theme }) => theme.spacing.mx}px;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 20px;
+`;
+export const Wrapper = styled.div`
+  display: flex;
 `;
 export const Span = styled.span`
   display: flex;

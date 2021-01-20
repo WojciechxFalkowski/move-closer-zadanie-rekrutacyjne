@@ -1,31 +1,70 @@
 import React from "react";
-import { Wrapper, Span, DataWrapper, Title, Paragraph } from "./RoomCard.css";
-import { SwitchButton } from "components";
+import {
+  Container,
+  Wrapper,
+  Span,
+  DataWrapper,
+  Title,
+  Paragraph,
+} from "./RoomCard.css";
+import { SwitchButton, Slider } from "components";
 const RoomCard = ({
   id,
   icon,
   title,
-  text,
+  sliderSettings,
   active,
   cardTitleId,
   hangleChangeActiveDevices,
+  handleSlider,
 }) => {
   return (
-    <Wrapper>
-      <Span>{icon}</Span>
-      <DataWrapper>
-        <div>
-          <Title>{title}</Title>
-          <Paragraph>{text}</Paragraph>
-        </div>
-        <SwitchButton
-          isActiveRoom={active}
-          hangleChangeActiveDevices={hangleChangeActiveDevices}
-          id={id}
+    <Container>
+      <Wrapper>
+        <Span>{icon}</Span>
+        <DataWrapper>
+          <div>
+            <Title>{title}</Title>
+            <Paragraph>
+              {sliderSettings.map(
+                (slider) =>
+                  `${
+                    id === "camera"
+                      ? `${slider.text + slider.value}`
+                      : `${slider.value + slider.text}`
+                  }`
+              )}
+            </Paragraph>
+          </div>
+          <SwitchButton
+            isActiveRoom={active}
+            hangleChangeActiveDevices={hangleChangeActiveDevices}
+            id={id}
+            cardTitleId={cardTitleId}
+          />
+        </DataWrapper>
+      </Wrapper>
+      {sliderSettings.map((slider) => (
+        <Slider
+          key={slider.id}
+          min={slider.min}
+          max={slider.max}
+          value={slider.value}
           cardTitleId={cardTitleId}
+          device={id}
+          sliderId={slider.id}
+          handleSlider={handleSlider}
         />
-      </DataWrapper>
-    </Wrapper>
+      ))}
+      {/* <Slider
+        min={min}
+        max={max}
+        value={value}
+        cardTitleId={cardTitleId}
+        id={id}
+        handleSlider={handleSlider}
+      /> */}
+    </Container>
   );
 };
 

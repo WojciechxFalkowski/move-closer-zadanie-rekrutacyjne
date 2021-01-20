@@ -5,3 +5,4 @@ export { default as SwitchButton } from "./SwitchButton";
 export { default as RoomHeader } from "./RoomHeader";
 export { default as Measurement } from "./Measurement";
 export { default as RoomCard } from "./RoomCard";
+export { default as Slider } from "./Slider";

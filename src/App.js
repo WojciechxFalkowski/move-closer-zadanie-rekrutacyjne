@@ -18,7 +18,15 @@ function App() {
           id: "lamp",
           icon: <GiFlexibleLamp />,
           title: "Lamp",
-          text: "65% brightness",
+          sliderSettings: [
+            {
+              id: "brightness",
+              text: "% brightness",
+              min: 0,
+              max: 100,
+              value: 65,
+            },
+          ],
           remoteControl: true,
           active: true,
         },
@@ -26,7 +34,9 @@ function App() {
           id: "tv",
           icon: <FiMonitor />,
           title: "TV",
-          text: "37% Volume",
+          sliderSettings: [
+            { id: "volume", text: "% Volume", min: 0, max: 100, value: 37 },
+          ],
           remoteControl: true,
           active: false,
         },
@@ -34,7 +44,15 @@ function App() {
           id: "airconditioner",
           icon: <BiWind />,
           title: "Air Conditioner",
-          text: "24°C Temperature",
+          sliderSettings: [
+            {
+              id: "temperaute",
+              text: "°C Temperature",
+              min: -20,
+              max: 20,
+              value: 24,
+            },
+          ],
           remoteControl: true,
           active: true,
         },
@@ -42,15 +60,32 @@ function App() {
           id: "fridge",
           icon: <BiFridge />,
           title: "Fridge",
-          text: "5°C Temperature",
+          sliderSettings: [
+            {
+              id: "temperature",
+              text: "°C Temperature",
+              min: -10,
+              max: 10,
+              value: 5,
+            },
+          ],
           remoteControl: false,
           active: true,
         },
         {
           id: "camera",
           icon: <BiCctv />,
+          sliderSettings: [
+            {
+              id: "leftright",
+              text: "Left/Right ",
+              min: 0,
+              max: 180,
+              value: 96,
+            },
+            { id: "updown", text: " & Up/Down ", min: 0, max: 180, value: 96 },
+          ],
           title: "CCTV Cam.",
-          text: "Left/Right 96,4 ° & Up/Down: 86.2°",
           remoteControl: true,
           active: false,
         },
@@ -65,7 +100,15 @@ function App() {
           id: "lamp",
           icon: <GiFlexibleLamp />,
           title: "Lamp",
-          text: "65% brightness",
+          sliderSettings: [
+            {
+              id: "brightness",
+              text: "% brightness",
+              min: 0,
+              max: 100,
+              value: 65,
+            },
+          ],
           remoteControl: true,
           active: true,
         },
@@ -73,7 +116,9 @@ function App() {
           id: "tv",
           icon: <FiMonitor />,
           title: "TV",
-          text: "37% Volume",
+          sliderSettings: [
+            { id: "volume", text: "% Volume", min: 0, max: 100, value: 37 },
+          ],
           remoteControl: true,
           active: false,
         },
@@ -88,7 +133,15 @@ function App() {
           id: "lamp",
           icon: <GiFlexibleLamp />,
           title: "Lamp",
-          text: "65% brightness",
+          sliderSettings: [
+            {
+              id: "brightness",
+              text: "% brightness",
+              min: 0,
+              max: 100,
+              value: 65,
+            },
+          ],
           remoteControl: true,
           active: true,
         },
@@ -96,7 +149,9 @@ function App() {
           id: "tv",
           icon: <FiMonitor />,
           title: "TV",
-          text: "37% Volume",
+          sliderSettings: [
+            { id: "volume", text: "% Volume", min: 0, max: 100, value: 37 },
+          ],
           remoteControl: true,
           active: false,
         },
@@ -111,7 +166,15 @@ function App() {
           id: "lamp",
           icon: <GiFlexibleLamp />,
           title: "Lamp",
-          text: "65% brightness",
+          sliderSettings: [
+            {
+              id: "brightness",
+              text: "% brightness",
+              min: 0,
+              max: 100,
+              value: 65,
+            },
+          ],
           remoteControl: true,
           active: true,
         },
@@ -119,7 +182,9 @@ function App() {
           id: "tv",
           icon: <FiMonitor />,
           title: "TV",
-          text: "37% Volume",
+          sliderSettings: [
+            { id: "volume", text: "% Volume", min: 0, max: 100, value: 37 },
+          ],
           remoteControl: true,
           active: false,
         },
@@ -134,7 +199,15 @@ function App() {
           id: "lamp",
           icon: <GiFlexibleLamp />,
           title: "Lamp",
-          text: "65% brightness",
+          sliderSettings: [
+            {
+              id: "brightness",
+              text: "% brightness",
+              min: 0,
+              max: 100,
+              value: 65,
+            },
+          ],
           remoteControl: true,
           active: true,
         },
@@ -142,7 +215,9 @@ function App() {
           id: "tv",
           icon: <FiMonitor />,
           title: "TV",
-          text: "37% Volume",
+          sliderSettings: [
+            { id: "volume", text: "% Volume", min: 0, max: 100, value: 37 },
+          ],
           remoteControl: true,
           active: false,
         },
@@ -156,8 +231,17 @@ function App() {
         {
           id: "camera",
           icon: <BiCctv />,
+          sliderSettings: [
+            {
+              id: "leftright",
+              text: "Left/Right ",
+              min: 0,
+              max: 180,
+              value: 96,
+            },
+            { id: "updown", text: " & Up/Down ", min: 0, max: 180, value: 96 },
+          ],
           title: "CCTV Cam.",
-          text: "Left/Right 96,4 ° & Up/Down: 86.2°",
           remoteControl: true,
           active: false,
         },
@@ -165,7 +249,9 @@ function App() {
           id: "tv",
           icon: <FiMonitor />,
           title: "TV",
-          text: "37% Volume",
+          sliderSettings: [
+            { id: "volume", text: "% Volume", min: 0, max: 100, value: 37 },
+          ],
           remoteControl: true,
           active: false,
         },
@@ -189,6 +275,17 @@ function App() {
     }
     setCards([...cards]);
   };
+  const handleSlider = (value, cardTitleId, device, sliderId) => {
+    const [filteredCard] = cards.filter((card) => card.id === cardTitleId);
+    const [filteredDevices] = filteredCard.devices.filter(
+      (card) => card.id === device
+    );
+    const [filteredDevice] = filteredDevices.sliderSettings.filter(
+      (device) => device.id === sliderId
+    );
+    filteredDevice.value = value;
+    setCards([...cards]);
+  };
 
   return (
     <>
@@ -204,6 +301,7 @@ function App() {
                 <Room
                   card={card}
                   hangleChangeActiveDevices={hangleChangeActiveDevices}
+                  handleSlider={handleSlider}
                 />
               </Route>
             ))}
