@@ -6,13 +6,15 @@ import { useHistory } from "react-router-dom";
 import { RiTempHotLine } from "react-icons/ri";
 import { WiHumidity } from "react-icons/wi";
 
-const RoomHeader = ({ title, text }) => {
+const RoomHeader = ({
+  cardTitleId,
+  title,
+  text,
+  isActiveAddingDevice,
+  setIsActiveAddingDevice,
+  menuItems,
+}) => {
   const history = useHistory();
-  const profileInfo = {
-    title,
-    text,
-    menuItems: [{ id: "new", text: "Dodaj przedmiot" }],
-  };
   const measurementInfo = [
     { icon: <RiTempHotLine />, value: "24°C", text: "Temp" },
     { icon: <WiHumidity />, value: "50%", text: "Humidity" },
@@ -23,7 +25,12 @@ const RoomHeader = ({ title, text }) => {
       <Button onClick={() => history.goBack()}>
         <AiOutlineArrowLeft />
       </Button>
-      <PageInfo {...profileInfo} />
+      <PageInfo
+        title={title}
+        text={text}
+        menuItems={menuItems}
+        onClick={setIsActiveAddingDevice}
+      />
       <MeasurementWrapper>
         {measurementInfo.map((measurementItem) => (
           <Measurement key={measurementItem.text} {...measurementItem} />

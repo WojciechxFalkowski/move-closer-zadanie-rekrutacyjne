@@ -286,22 +286,27 @@ function App() {
     filteredDevice.value = value;
     setCards([...cards]);
   };
-
+  const handleAddDevice = (newDevice, cardTitleId) => {
+    const [filteredCard] = cards.filter((card) => card.id === cardTitleId);
+    filteredCard.devices.push(newDevice);
+    setCards([...cards]);
+  };
+  const handleAddRoom = (newCard) => {
+    setCards([...cards, newCard]);
+  };
   return (
     <>
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Router>
           <Switch>
-            <Route path="/new">
-              <div>Dodaj pokój</div>
-            </Route>
             {cards.map((card) => (
               <Route key={card.title} path={`/${card.id}`}>
                 <Room
                   card={card}
                   hangleChangeActiveDevices={hangleChangeActiveDevices}
                   handleSlider={handleSlider}
+                  handleAddDevice={handleAddDevice}
                 />
               </Route>
             ))}
@@ -309,6 +314,7 @@ function App() {
               <Home
                 cards={cards}
                 hangleChangeActiveDevices={hangleChangeActiveDevices}
+                handleAddRoom={handleAddRoom}
               />
             </Route>
           </Switch>

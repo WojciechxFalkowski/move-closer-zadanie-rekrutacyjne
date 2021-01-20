@@ -7,11 +7,14 @@ const Card = ({ id, title, text, devices, hangleChangeActiveDevices }) => {
     devices.filter((device) => device.active && device.remoteControl).length > 0
       ? true
       : false;
+
   return (
     <CardWrapper>
       <Title>{title}</Title>
       <Paragraph>{text}</Paragraph>
-      <DevicesNumber to={`/${id}`}>{devices.length} Devices</DevicesNumber>
+      <DevicesNumber to={`/${id}`}>
+        {devices.length === 1 ? "Device" : "Devices"}
+      </DevicesNumber>
       <SwitchButton
         isActiveRoom={isActiveRoom}
         id={id}

@@ -37,9 +37,9 @@ export const DropdownContent = styled.div`
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   right: 0;
-  z-index: 1;
+  z-index: 100;
 `;
-export const MenuItem = styled.a`
+export const MenuItem = styled.button`
   color: black;
   padding: ${({ theme }) => theme.spacing.sm}px;
   text-decoration: none;
@@ -47,4 +47,13 @@ export const MenuItem = styled.a`
   &:hover {
     opacity: 0.7;
   }
+`;
+export const InvisibleWrapper = styled.div`
+  display: ${({ isVisible }) => (isVisible ? "block" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
 `;
