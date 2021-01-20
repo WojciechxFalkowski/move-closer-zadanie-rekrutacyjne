@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Home, Room } from "pages";
 import GlobalStyles from "./index.css";
+import { GiFlexibleLamp } from "react-icons/gi";
+import { FiMonitor } from "react-icons/fi";
+import { BiFridge, BiCctv, BiWind } from "react-icons/bi";
 function App() {
   const [cards, setCards] = useState([
     {
@@ -12,35 +15,40 @@ function App() {
       text: "3 family members have access",
       devices: [
         {
-          icon: "",
+          id: "lamp",
+          icon: <GiFlexibleLamp />,
           title: "Lamp",
           text: "65% brightness",
           remoteControl: true,
           active: true,
         },
         {
-          icon: "",
+          id: "tv",
+          icon: <FiMonitor />,
           title: "TV",
           text: "37% Volume",
           remoteControl: true,
           active: false,
         },
         {
-          icon: "",
+          id: "airconditioner",
+          icon: <BiWind />,
           title: "Air Conditioner",
           text: "24°C Temperature",
           remoteControl: true,
           active: true,
         },
         {
-          icon: "",
+          id: "fridge",
+          icon: <BiFridge />,
           title: "Fridge",
           text: "5°C Temperature",
           remoteControl: false,
           active: true,
         },
         {
-          icon: "",
+          id: "camera",
+          icon: <BiCctv />,
           title: "CCTV Cam.",
           text: "Left/Right 96,4 ° & Up/Down: 86.2°",
           remoteControl: true,
@@ -54,14 +62,16 @@ function App() {
       text: "3 family members have access",
       devices: [
         {
-          icon: "",
+          id: "lamp",
+          icon: <GiFlexibleLamp />,
           title: "Lamp",
           text: "65% brightness",
           remoteControl: true,
           active: true,
         },
         {
-          icon: "",
+          id: "tv",
+          icon: <FiMonitor />,
           title: "TV",
           text: "37% Volume",
           remoteControl: true,
@@ -75,14 +85,16 @@ function App() {
       text: "3 family members have access",
       devices: [
         {
-          icon: "",
+          id: "lamp",
+          icon: <GiFlexibleLamp />,
           title: "Lamp",
           text: "65% brightness",
           remoteControl: true,
           active: true,
         },
         {
-          icon: "",
+          id: "tv",
+          icon: <FiMonitor />,
           title: "TV",
           text: "37% Volume",
           remoteControl: true,
@@ -96,14 +108,16 @@ function App() {
       text: "3 family members have access",
       devices: [
         {
-          icon: "",
+          id: "lamp",
+          icon: <GiFlexibleLamp />,
           title: "Lamp",
           text: "65% brightness",
           remoteControl: true,
           active: true,
         },
         {
-          icon: "",
+          id: "tv",
+          icon: <FiMonitor />,
           title: "TV",
           text: "37% Volume",
           remoteControl: true,
@@ -117,14 +131,16 @@ function App() {
       text: "3 family members have access",
       devices: [
         {
-          icon: "",
+          id: "lamp",
+          icon: <GiFlexibleLamp />,
           title: "Lamp",
           text: "65% brightness",
           remoteControl: true,
           active: true,
         },
         {
-          icon: "",
+          id: "tv",
+          icon: <FiMonitor />,
           title: "TV",
           text: "37% Volume",
           remoteControl: true,
@@ -138,14 +154,16 @@ function App() {
       text: "3 family members have access",
       devices: [
         {
-          icon: "",
+          id: "camera",
+          icon: <BiCctv />,
           title: "CCTV Cam.",
           text: "Left/Right 96,4 ° & Up/Down: 86.2°",
           remoteControl: true,
           active: false,
         },
         {
-          icon: "",
+          id: "tv",
+          icon: <FiMonitor />,
           title: "TV",
           text: "37% Volume",
           remoteControl: true,
@@ -154,15 +172,24 @@ function App() {
       ],
     },
   ]);
-  const hangleChangeActiveDevices = (id, toggle) => {
-    const [filteredCard] = cards.filter((card) => card.id === id);
-    filteredCard.devices.forEach((device) => {
-      if (device.remoteControl) {
-        device.active = toggle;
-      }
-    });
+  const hangleChangeActiveDevices = (cardTitleId = "", id, toggle) => {
+    if (cardTitleId === "") {
+      const [filteredCard] = cards.filter((card) => card.id === id);
+      filteredCard.devices.forEach((device) => {
+        if (device.remoteControl) {
+          device.active = toggle;
+        }
+      });
+    } else {
+      const [filteredCard] = cards.filter((card) => card.id === cardTitleId);
+      const [filteredDevice] = filteredCard.devices.filter(
+        (card) => card.id === id
+      );
+      filteredDevice.active = toggle;
+    }
     setCards([...cards]);
   };
+
   return (
     <>
       <GlobalStyles />
@@ -174,7 +201,10 @@ function App() {
             </Route>
             {cards.map((card) => (
               <Route key={card.title} path={`/${card.id}`}>
-                <Room card={card} />
+                <Room
+                  card={card}
+                  hangleChangeActiveDevices={hangleChangeActiveDevices}
+                />
               </Route>
             ))}
             <Route path="/">

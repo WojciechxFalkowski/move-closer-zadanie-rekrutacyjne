@@ -5,6 +5,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useHistory } from "react-router-dom";
 import { RiTempHotLine } from "react-icons/ri";
 import { WiHumidity } from "react-icons/wi";
+
 const RoomHeader = ({ title, text }) => {
   const history = useHistory();
   const profileInfo = {
@@ -16,6 +17,7 @@ const RoomHeader = ({ title, text }) => {
     { icon: <RiTempHotLine />, value: "24°C", text: "Temp" },
     { icon: <WiHumidity />, value: "50%", text: "Humidity" },
   ];
+
   return (
     <Header>
       <Button onClick={() => history.goBack()}>

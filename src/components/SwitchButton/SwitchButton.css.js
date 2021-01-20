@@ -11,6 +11,7 @@ export const CheckBoxLabel = styled.label`
   border-radius: 15px;
   background: rgb(229, 229, 229, 0.5);
   cursor: pointer;
+  transform: translateY(10px);
   &::after {
     content: "";
     display: block;
@@ -31,6 +32,8 @@ export const CheckBox = styled.input`
   border-radius: 15px;
   width: 42px;
   height: 26px;
+  transform: translateY(5px);
+  cursor: pointer;
   &:checked + ${CheckBoxLabel} {
     background-color: rgba(248, 131, 63, 0.3);
     &::after {
