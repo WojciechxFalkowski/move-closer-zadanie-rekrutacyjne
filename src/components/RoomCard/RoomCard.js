@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   Container,
   Wrapper,
@@ -8,6 +9,8 @@ import {
   Paragraph,
 } from "./RoomCard.css";
 import { SwitchButton, Slider } from "components";
+
+//komponent wyswietlajacy pojedyncze urzadzenie w pokoju
 const RoomCard = ({
   id,
   icon,
@@ -59,5 +62,14 @@ const RoomCard = ({
     </Container>
   );
 };
-
+RoomCard.propTypes = {
+  id: PropTypes.string,
+  icon: PropTypes.element,
+  title: PropTypes.string,
+  sliderSettings: PropTypes.array,
+  active: PropTypes.bool,
+  cardTitleId: PropTypes.string,
+  hangleChangeActiveDevices: PropTypes.func,
+  handleSlider: PropTypes.func,
+};
 export default RoomCard;

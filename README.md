@@ -37,7 +37,7 @@
 #### src directory (includes exercice number 2):
 
 - **components**
-  Includes components which are reused between screens like `form fields` or `buttons`, `cards`, `sliders` and etc...
+  Includes components which are reused between screens like `form fields`, `buttons`, `cards`, `sliders` and etc...
 - **dummyData**
   Contains fake data locally
 - **images**

@@ -8,3 +8,4 @@ export { default as RoomCard } from "./RoomCard";
 export { default as Slider } from "./Slider";
 export { default as AddNewDevice } from "./AddNewDevice";
 export { default as AddNewRoom } from "./AddNewRoom";
+//preferuje podzial na foldery kazdego komponetu gdzie znajduje sie komponent wraz ze stylami

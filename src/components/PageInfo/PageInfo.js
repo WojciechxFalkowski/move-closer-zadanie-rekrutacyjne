@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import {
   ProfileWrapperInfo,
   Wrapper,
@@ -11,11 +12,15 @@ import {
   InvisibleWrapper,
 } from "./PageInfo.css";
 import { AiOutlineSetting } from "react-icons/ai";
+// Komponent wyswietlajacy podstawowe dane o stronie (nazwa pokoju / przywitania wraz z menu)
 const PageInfo = ({ title, text, menuItems }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false); // sluzy do otwierania menu
+  //funkcja do otwierania menu, robi tylko jedna czynnos wiec mozna bylo przypiac setIsVisible(!isVisible) do buttona jako funkcje strzalkowa
+  //ale wole zapis funkcji "handle..."(wydaje mi sie, ze jest lepsza czytelnosc)
   const handleShowMenu = () => {
     setIsVisible(!isVisible);
   };
+  //funkcja, ktora wykonuje sie po kliknieciu w dany przycisk w menu (zamyka menu i cos jeszcze w zaleznosci od kliknietego przycisku)
   const handleMenuItem = (menuItem) => {
     setIsVisible(!isVisible);
     menuItem.onClick(menuItem.text);
@@ -48,5 +53,9 @@ const PageInfo = ({ title, text, menuItems }) => {
     </Wrapper>
   );
 };
-
+PageInfo.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+  menuItems: PropTypes.array,
+};
 export default PageInfo;

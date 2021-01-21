@@ -1,6 +1,6 @@
-import { GiFlexibleLamp } from "react-icons/gi";
-import { FiMonitor } from "react-icons/fi";
-import { BiFridge, BiCctv, BiWind } from "react-icons/bi";
+import { GiFlexibleLamp } from "react-icons/gi"; //ikonka
+import { FiMonitor } from "react-icons/fi"; //ikonka
+import { BiFridge, BiCctv, BiWind } from "react-icons/bi"; //ikonki
 const dummyDataCards = [
   {
     id: "living-room",

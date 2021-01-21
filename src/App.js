@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Home, Room } from "pages";
 import GlobalStyles from "./theme/index.css";
-import dummyDataCards from "dummyData/dummyData";
+import dummyDataCards from "dummyData/dummyData"; //dane o pokojach/urzadzeniach
 function App() {
   const [cards, setCards] = useState(dummyDataCards);
+
+  // funkcja szukająca urzadzen, ktore moga byc aktywowane na glownej stronie(remoteControl = true) na podstawie kliknietego pokoju, po znalezieniu przelacza ich stan (active)
   const hangleChangeActiveDevices = (cardTitleId = "", id, toggle) => {
     if (cardTitleId === "") {
       const [filteredCard] = cards.filter((card) => card.id === id);
@@ -24,6 +26,8 @@ function App() {
     }
     setCards([...cards]);
   };
+
+  // funkcja szukajaca urzadzenia kliknietego w pokoju i zmieniajaca jego stan aktywny/nieaktywny (active)
   const handleSlider = (value, cardTitleId, device, sliderId) => {
     const [filteredCard] = cards.filter((card) => card.id === cardTitleId);
     const [filteredDevices] = filteredCard.devices.filter(
@@ -35,11 +39,15 @@ function App() {
     filteredDevice.value = value;
     setCards([...cards]);
   };
+
+  // funkcja dodajaca nowe urzadzenie w panelu pokoju
   const handleAddDevice = (newDevice, cardTitleId) => {
     const [filteredCard] = cards.filter((card) => card.id === cardTitleId);
     filteredCard.devices.push(newDevice);
     setCards([...cards]);
   };
+
+  //funkcja dodajaca nowy pokoj
   const handleAddRoom = (newCard) => {
     setCards([...cards, newCard]);
   };

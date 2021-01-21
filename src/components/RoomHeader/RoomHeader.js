@@ -11,13 +11,13 @@ import { useHistory } from "react-router-dom";
 import { RiTempHotLine } from "react-icons/ri";
 import { WiHumidity } from "react-icons/wi";
 
+// Header strony pokoju (pages->Room) -> strzalka cofniecia do Home , nazwa pokoju, menu, temperatura i wilgotnosc
 const RoomHeader = ({ title, text, setIsActiveAddingDevice, menuItems }) => {
   const history = useHistory();
   const measurementInfo = [
     { icon: <RiTempHotLine />, value: "24°C", text: "Temp" },
     { icon: <WiHumidity />, value: "50%", text: "Humidity" },
   ];
-
   return (
     <Header>
       <HeaderWrapper>

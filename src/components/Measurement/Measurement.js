@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   Wrapper,
   Span,
@@ -6,6 +7,7 @@ import {
   ValueParagraph,
   TextParagraph,
 } from "./Measurement.css";
+// Komponent wyświetlajacy temperature i wilgotnosc
 const Measurement = ({ icon, value, text }) => {
   return (
     <Wrapper>
@@ -17,5 +19,9 @@ const Measurement = ({ icon, value, text }) => {
     </Wrapper>
   );
 };
-
+Measurement.propTypes = {
+  icon: PropTypes.element,
+  value: PropTypes.string,
+  text: PropTypes.string,
+};
 export default Measurement;

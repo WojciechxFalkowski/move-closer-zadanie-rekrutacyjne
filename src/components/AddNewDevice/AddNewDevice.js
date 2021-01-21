@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import {
   Wrapper,
   H2,
@@ -12,6 +13,9 @@ import {
 } from "./AddNewDevice.css";
 import { Formik } from "formik";
 import { AiOutlineQuestion } from "react-icons/ai";
+
+//Komponent odpowiedzialny za dodawanie nowego urzadzenia
+//Uzylem biblioteki formik do latwiejszego zarzadzania calym formularzem
 const AddNewDevice = ({
   devices,
   cardTitleId,
@@ -34,6 +38,7 @@ const AddNewDevice = ({
         }}
         validate={(values) => {
           const errors = {};
+          //walidacja
           if (!values.deviceName) {
             errors.deviceName = "Required";
           }
@@ -141,5 +146,11 @@ const AddNewDevice = ({
     </Wrapper>
   );
 };
-
+AddNewDevice.propTypes = {
+  devices: PropTypes.array,
+  cardTitleId: PropTypes.string,
+  handleAddDevice: PropTypes.func,
+  setIsActiveAddingDevice: PropTypes.func,
+  defaultRoom: PropTypes.string,
+};
 export default AddNewDevice;

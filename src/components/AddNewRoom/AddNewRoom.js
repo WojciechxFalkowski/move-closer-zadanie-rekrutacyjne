@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   Wrapper,
   H2,
@@ -8,6 +9,8 @@ import {
   Button,
 } from "./AddNewRoom.css";
 import { Formik } from "formik";
+
+//Komponent odpowiedzialny za dodawanie nowego pokoju
 const AddNewRoom = ({
   cards,
   handleAddRoom,
@@ -62,5 +65,10 @@ const AddNewRoom = ({
     </Wrapper>
   );
 };
-
+AddNewRoom.propTypes = {
+  cards: PropTypes.array,
+  handleAddRoom: PropTypes.func,
+  setIsActiveAddingRoom: PropTypes.func,
+  defaultBar: PropTypes.string,
+};
 export default AddNewRoom;

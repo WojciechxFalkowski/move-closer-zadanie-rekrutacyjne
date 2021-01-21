@@ -1,7 +1,8 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import { CheckBoxWrapper, CheckBox, CheckBoxLabel } from "./SwitchButton.css";
 
+// komponent do zmiany stanu w Home i w Room (wszystkich urzadzen z remoteControl = true / pojedynczego urzadzenia w pokoju)
 const SwitchButton = ({
   cardTitleId,
   isActiveRoom,
@@ -30,5 +31,11 @@ const SwitchButton = ({
     </CheckBoxWrapper>
   );
 };
-
+SwitchButton.propTypes = {
+  cardTitleId: PropTypes.string,
+  isActiveRoom: PropTypes.bool,
+  hangleChangeActiveDevices: PropTypes.func,
+  id: PropTypes.string,
+  isGoToSleep: PropTypes.bool,
+};
 export default SwitchButton;

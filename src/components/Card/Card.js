@@ -1,6 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { CardWrapper, Title, Paragraph, DevicesNumber } from "./Card.css";
 import { SwitchButton } from "components";
+
+//komponent budujacy kazdy pojedynczy kafelek pokoju na stronie glownej
 const Card = ({
   id,
   title,
@@ -30,5 +33,12 @@ const Card = ({
     </CardWrapper>
   );
 };
-
+Card.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  text: PropTypes.string,
+  devices: PropTypes.array,
+  hangleChangeActiveDevices: PropTypes.func,
+  isGoToSleep: PropTypes.bool,
+};
 export default Card;
