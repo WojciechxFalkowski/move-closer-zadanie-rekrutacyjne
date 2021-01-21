@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function goclone(source) {
+      if (Object.prototype.toString.call(source) === '[object Array]') {
+        let clone = [];
+        for (let i = 0; i < source.length; i++) {
+          clone[i] = goclone(source[i]);
+        }
+        return clone;
+      } else if (typeof (source) == "object") {
+        let clone = {};
+        for (let prop in source) {
+          if (source.hasOwnProperty(prop)) {
+            clone[prop] = goclone(source[prop]);
+          }
+        }
+        return clone;
+      } else {
+        return source;
+      }
+    }
+    let obj = {
+      a: 25,
+      b: 50,
+      c: 75
+    };
+    let A = goclone(obj);
+    let B = goclone(obj);
+    A.a = 30;
+    B.a = 40;
+    console.table(obj);
+    console.table(A);
+    console.table(B);
+  </script>
+</body>
+
+</html>

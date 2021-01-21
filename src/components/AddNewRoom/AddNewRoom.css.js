@@ -1,5 +1,14 @@
 import styled from "styled-components";
 import { Form, Field, ErrorMessage } from "formik";
+export const Wrapper = styled.div`
+  margin: 0 auto;
+`;
+export const H2 = styled.h2`
+  text-align: center;
+  font-size: 20px;
+  color: ${({ theme }) => theme.colors.white};
+  padding-bottom: ${({ theme }) => theme.spacing.sm}px;
+`;
 export const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;

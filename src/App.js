@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Home, Room } from "pages";
-import GlobalStyles from "./index.css";
+import GlobalStyles from "./theme/index.css";
 import dummyDataCards from "dummyData/dummyData";
 function App() {
   const [cards, setCards] = useState(dummyDataCards);
@@ -47,7 +47,7 @@ function App() {
     <>
       <GlobalStyles />
       <ThemeProvider theme={theme}>
-        <Router>
+        <Router basename="/move-closer-zadanie-rekrutacyjne">
           <Switch>
             {cards.map((card) => (
               <Route key={card.title} path={`/${card.id}`}>

@@ -7,16 +7,24 @@ const SwitchButton = ({
   isActiveRoom,
   hangleChangeActiveDevices,
   id,
+  isGoToSleep,
 }) => {
+  const handleSwitchToggle = () => {
+    if (isGoToSleep) {
+      setTimeout(() => {
+        hangleChangeActiveDevices(cardTitleId, id, !isActiveRoom);
+      }, 15000);
+    } else {
+      hangleChangeActiveDevices(cardTitleId, id, !isActiveRoom);
+    }
+  };
   return (
     <CheckBoxWrapper>
       <CheckBox
         id={id}
         type="checkbox"
         checked={isActiveRoom}
-        onChange={() =>
-          hangleChangeActiveDevices(cardTitleId, id, !isActiveRoom)
-        }
+        onChange={handleSwitchToggle}
       />
       <CheckBoxLabel htmlFor={id} isActiveRoom={isActiveRoom} />
     </CheckBoxWrapper>

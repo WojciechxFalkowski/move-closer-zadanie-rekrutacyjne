@@ -1,8 +1,14 @@
 import React from "react";
 import { CardWrapper, Title, Paragraph, DevicesNumber } from "./Card.css";
 import { SwitchButton } from "components";
-
-const Card = ({ id, title, text, devices, hangleChangeActiveDevices }) => {
+const Card = ({
+  id,
+  title,
+  text,
+  devices,
+  hangleChangeActiveDevices,
+  isGoToSleep,
+}) => {
   const isActiveRoom =
     devices.filter((device) => device.active && device.remoteControl).length > 0
       ? true
@@ -19,6 +25,7 @@ const Card = ({ id, title, text, devices, hangleChangeActiveDevices }) => {
         isActiveRoom={isActiveRoom}
         id={id}
         hangleChangeActiveDevices={hangleChangeActiveDevices}
+        isGoToSleep={isGoToSleep}
       />
     </CardWrapper>
   );

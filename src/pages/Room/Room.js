@@ -7,10 +7,11 @@ const Room = ({
   handleSlider,
   handleAddDevice,
 }) => {
-  const menuItems = ["Devices", "Add device"];
-  const [isActiveAddingDevice, setIsActiveAddingDevice] = useState(
-    menuItems[0]
-  );
+  const [isActiveAddingDevice, setIsActiveAddingDevice] = useState("Devices");
+  const menuItems = [
+    { text: "Devices", onClick: setIsActiveAddingDevice },
+    { text: "Add device", onClick: setIsActiveAddingDevice },
+  ];
 
   return (
     <Section>

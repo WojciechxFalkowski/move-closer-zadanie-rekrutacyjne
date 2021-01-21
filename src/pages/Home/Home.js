@@ -2,21 +2,28 @@ import React, { useState } from "react";
 import { Wrapper, CardsWrapper } from "./Home.css";
 import { HomeHeader, Card, AddNewRoom } from "components";
 const Home = ({ cards, hangleChangeActiveDevices, handleAddRoom }) => {
-  const menuItems = ["Rooms", "Add room"];
-  const [isActiveAddingRoom, setIsActiveAddingRoom] = useState(menuItems[0]);
+  const [isActiveAddingRoom, setIsActiveAddingRoom] = useState("Rooms");
+  const [isGoToSleep, setIsGoToSleep] = useState(false);
+  const handleGoToSleep = () => {
+    setIsGoToSleep(!isGoToSleep);
+  };
+  const menuItems = [
+    { text: "Rooms", onClick: setIsActiveAddingRoom },
+    { text: "Add room", onClick: setIsActiveAddingRoom },
+    { text: "Go to sleep", onClick: handleGoToSleep },
+  ];
+
   return (
     <Wrapper>
-      <HomeHeader
-        menuItems={menuItems}
-        setIsActiveAddingRoom={setIsActiveAddingRoom}
-      />
+      <HomeHeader menuItems={menuItems} />
       <CardsWrapper>
-        {isActiveAddingRoom === menuItems[0] ? (
+        {isActiveAddingRoom === menuItems[0].text ? (
           cards.map((card) => (
             <Card
               key={card.title}
               {...card}
               hangleChangeActiveDevices={hangleChangeActiveDevices}
+              isGoToSleep={isGoToSleep}
             />
           ))
         ) : (
@@ -24,7 +31,7 @@ const Home = ({ cards, hangleChangeActiveDevices, handleAddRoom }) => {
             cards={cards}
             handleAddRoom={handleAddRoom}
             setIsActiveAddingRoom={setIsActiveAddingRoom}
-            defaultBar={menuItems[0]}
+            defaultBar={menuItems[0].text}
           />
         )}
       </CardsWrapper>

@@ -11,14 +11,14 @@ import {
   InvisibleWrapper,
 } from "./PageInfo.css";
 import { AiOutlineSetting } from "react-icons/ai";
-const PageInfo = ({ title, text, menuItems, onClick }) => {
+const PageInfo = ({ title, text, menuItems }) => {
   const [isVisible, setIsVisible] = useState(false);
   const handleShowMenu = () => {
     setIsVisible(!isVisible);
   };
   const handleMenuItem = (menuItem) => {
     setIsVisible(!isVisible);
-    onClick(menuItem);
+    menuItem.onClick(menuItem.text);
   };
   return (
     <Wrapper>
@@ -32,8 +32,11 @@ const PageInfo = ({ title, text, menuItems, onClick }) => {
         </Button>
         <DropdownContent isVisible={isVisible}>
           {menuItems.map((menuItem) => (
-            <MenuItem key={menuItem} onClick={() => handleMenuItem(menuItem)}>
-              {menuItem}
+            <MenuItem
+              key={menuItem.text}
+              onClick={() => handleMenuItem(menuItem)}
+            >
+              {menuItem.text}
             </MenuItem>
           ))}
         </DropdownContent>
