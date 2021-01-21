@@ -15,16 +15,16 @@
 ### Screenshots:
 
 <p align="center">
-  <img src="https://github.com/WojciechxFalkowski/test/blob/main/home.png?raw=true" alt="Home page"/>
+  <img src="https://github.com/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/blob/main/home.png?raw=true" alt="Home page"/>
 </p>
 <p align="center">
-  <img src="https://github.com/WojciechxFalkowski/test/blob/main/add-room.png?raw=true" alt="Room page"/>
+  <img src="https://github.com/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/blob/main/room.png?raw=true" alt="Room page"/>
 </p>
 <p align="center">
-  <img src="https://github.com/WojciechxFalkowski/test/blob/main/add-room.png?raw=true" alt="Add room"/>
+  <img src="https://github.com/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/blob/main/add-room.png?raw=true" alt="Add room"/>
 </p>
 <p align="center">
-  <img src="https://github.com/WojciechxFalkowski/test/blob/main/add-device.png?raw=true" alt="Add device"/>
+  <img src="https://github.com/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/blob/main/add-device.png?raw=true" alt="Add device"/>
 </p>
 
 ### Folders structure
