@@ -14,10 +14,18 @@
 
 ### Screenshots:
 
-![](screenshots/home.png)
-![](screenshots/room.png)
-![](screenshots/add-room.png)
-![](screenshots/add-device.png)
+<p align="center">
+  <img src="https://github.com/WojciechxFalkowski/test/blob/main/home.png?raw=true" alt="Home page"/>
+</p>
+<p align="center">
+  <img src="https://github.com/WojciechxFalkowski/test/blob/main/add-room.png?raw=true" alt="Room page"/>
+</p>
+<p align="center">
+  <img src="https://github.com/WojciechxFalkowski/test/blob/main/add-room.png?raw=true" alt="Add room"/>
+</p>
+<p align="center">
+  <img src="https://github.com/WojciechxFalkowski/test/blob/main/add-device.png?raw=true" alt="Add device"/>
+</p>
 
 ### Folders structure
 
