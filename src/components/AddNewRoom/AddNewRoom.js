@@ -1,5 +1,10 @@
 import React from "react";
-import { StyledForm, StyledField, StyledErrorMessage } from "./AddNewRoom.css";
+import {
+  StyledForm,
+  StyledField,
+  StyledErrorMessage,
+  Button,
+} from "./AddNewRoom.css";
 import { Formik } from "formik";
 const AddNewRoom = ({
   cards,
@@ -23,7 +28,7 @@ const AddNewRoom = ({
             return card.id === values.roomName.toLowerCase();
           });
           if (filteredDeviced !== undefined) {
-            errors.roomName = "Name of device is taken";
+            errors.roomName = "Name of room is taken";
           }
         }
         return errors;
@@ -44,9 +49,9 @@ const AddNewRoom = ({
         <StyledForm>
           <StyledField type="text" placeholder="room name" name="roomName" />
           <StyledErrorMessage name="roomName" component="div" />
-          <button type="submit" disabled={isSubmitting}>
+          <Button type="submit" disabled={isSubmitting}>
             Add Room
-          </button>
+          </Button>
         </StyledForm>
       )}
     </Formik>

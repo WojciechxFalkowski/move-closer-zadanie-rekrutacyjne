@@ -13,7 +13,7 @@ const Card = ({ id, title, text, devices, hangleChangeActiveDevices }) => {
       <Title>{title}</Title>
       <Paragraph>{text}</Paragraph>
       <DevicesNumber to={`/${id}`}>
-        {devices.length === 1 ? "Device" : "Devices"}
+        {devices.length + (devices.length === 1 ? " Device" : " Devices")}
       </DevicesNumber>
       <SwitchButton
         isActiveRoom={isActiveRoom}

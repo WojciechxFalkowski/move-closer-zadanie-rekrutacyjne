@@ -30,7 +30,7 @@ const RoomCard = ({
                 (slider) =>
                   `${
                     id === "camera"
-                      ? `${slider.text + slider.value}`
+                      ? `${slider.text + slider.value}°`
                       : `${slider.value + slider.text}`
                   }`
               )}
@@ -56,14 +56,6 @@ const RoomCard = ({
           handleSlider={handleSlider}
         />
       ))}
-      {/* <Slider
-        min={min}
-        max={max}
-        value={value}
-        cardTitleId={cardTitleId}
-        id={id}
-        handleSlider={handleSlider}
-      /> */}
     </Container>
   );
 };

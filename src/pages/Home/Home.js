@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Section, CardsWrapper } from "./Home.css";
+import { Wrapper, CardsWrapper } from "./Home.css";
 import { HomeHeader, Card, AddNewRoom } from "components";
 const Home = ({ cards, hangleChangeActiveDevices, handleAddRoom }) => {
   const menuItems = ["Rooms", "Add room"];
   const [isActiveAddingRoom, setIsActiveAddingRoom] = useState(menuItems[0]);
   return (
-    <Section>
+    <Wrapper>
       <HomeHeader
         menuItems={menuItems}
         setIsActiveAddingRoom={setIsActiveAddingRoom}
@@ -28,7 +28,7 @@ const Home = ({ cards, hangleChangeActiveDevices, handleAddRoom }) => {
           />
         )}
       </CardsWrapper>
-    </Section>
+    </Wrapper>
   );
 };
 

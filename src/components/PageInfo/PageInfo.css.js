@@ -40,10 +40,12 @@ export const DropdownContent = styled.div`
   z-index: 100;
 `;
 export const MenuItem = styled.button`
-  color: black;
-  padding: ${({ theme }) => theme.spacing.sm}px;
-  text-decoration: none;
   display: block;
+  width: 100%;
+  padding: ${({ theme }) => theme.spacing.sm}px;
+  color: black;
+  text-decoration: none;
+  text-align: left;
   &:hover {
     opacity: 0.7;
   }

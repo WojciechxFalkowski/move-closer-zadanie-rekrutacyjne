@@ -2,7 +2,10 @@ import React from "react";
 import {
   StyledForm,
   StyledField,
+  StyledFieldCheckbox,
   StyledErrorMessage,
+  Button,
+  CheckboxWrapper,
 } from "./AddNewDevice.css";
 import { Formik } from "formik";
 import { AiOutlineQuestion } from "react-icons/ai";
@@ -102,10 +105,18 @@ const AddNewDevice = ({
           <StyledErrorMessage name="minValue" component="div" />
           <StyledField type="number" placeholder="max value" name="maxValue" />
           <StyledErrorMessage name="maxValue" component="div" />
-          <StyledField type="checkbox" name="checkbox" />
-          <button type="submit" disabled={isSubmitting}>
+          <CheckboxWrapper>
+            <label htmlFor="checkbox">remote control</label>
+            <StyledFieldCheckbox
+              id="checkbox"
+              type="checkbox"
+              name="checkbox"
+            />
+          </CheckboxWrapper>
+
+          <Button type="submit" disabled={isSubmitting}>
             Add Device
-          </button>
+          </Button>
         </StyledForm>
       )}
     </Formik>
