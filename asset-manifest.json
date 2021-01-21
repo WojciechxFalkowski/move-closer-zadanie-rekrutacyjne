@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/move-closer-zadanie-rekrutacyjne/static/js/main.7b12fa2d.chunk.js",
-    "main.js.map": "/move-closer-zadanie-rekrutacyjne/static/js/main.7b12fa2d.chunk.js.map",
+    "main.js": "/move-closer-zadanie-rekrutacyjne/static/js/main.72a30701.chunk.js",
+    "main.js.map": "/move-closer-zadanie-rekrutacyjne/static/js/main.72a30701.chunk.js.map",
     "runtime-main.js": "/move-closer-zadanie-rekrutacyjne/static/js/runtime-main.db9a18d9.js",
     "runtime-main.js.map": "/move-closer-zadanie-rekrutacyjne/static/js/runtime-main.db9a18d9.js.map",
-    "static/js/2.07bf14a0.chunk.js": "/move-closer-zadanie-rekrutacyjne/static/js/2.07bf14a0.chunk.js",
-    "static/js/2.07bf14a0.chunk.js.map": "/move-closer-zadanie-rekrutacyjne/static/js/2.07bf14a0.chunk.js.map",
+    "static/js/2.f6c81521.chunk.js": "/move-closer-zadanie-rekrutacyjne/static/js/2.f6c81521.chunk.js",
+    "static/js/2.f6c81521.chunk.js.map": "/move-closer-zadanie-rekrutacyjne/static/js/2.f6c81521.chunk.js.map",
     "static/js/3.7b530500.chunk.js": "/move-closer-zadanie-rekrutacyjne/static/js/3.7b530500.chunk.js",
     "static/js/3.7b530500.chunk.js.map": "/move-closer-zadanie-rekrutacyjne/static/js/3.7b530500.chunk.js.map",
     "index.html": "/move-closer-zadanie-rekrutacyjne/index.html",
-    "static/js/2.07bf14a0.chunk.js.LICENSE.txt": "/move-closer-zadanie-rekrutacyjne/static/js/2.07bf14a0.chunk.js.LICENSE.txt",
+    "static/js/2.f6c81521.chunk.js.LICENSE.txt": "/move-closer-zadanie-rekrutacyjne/static/js/2.f6c81521.chunk.js.LICENSE.txt",
     "static/media/profile-image.2bc577d3.jpg": "/move-closer-zadanie-rekrutacyjne/static/media/profile-image.2bc577d3.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.db9a18d9.js",
-    "static/js/2.07bf14a0.chunk.js",
-    "static/js/main.7b12fa2d.chunk.js"
+    "static/js/2.f6c81521.chunk.js",
+    "static/js/main.72a30701.chunk.js"
   ]
 }
