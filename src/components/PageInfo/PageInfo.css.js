@@ -29,7 +29,7 @@ export const Button = styled.button`
   font-size: 24px;
   color: ${({ theme }) => theme.colors.white};
 `;
-export const DropdownContent = styled.div`
+export const DropdownContent = styled.nav`
   display: ${({ isVisible }) => (isVisible ? "block" : "none")};
   position: absolute;
   background-color: ${({ theme }) => theme.colors.white};

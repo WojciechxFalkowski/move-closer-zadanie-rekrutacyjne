@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.orange};
   padding: ${({ theme }) => theme.spacing.mx}px;
 `;
-export const CardsWrapper = styled.section`
+export const CardsWrapper = styled.main`
   display: flex;
   flex-wrap: wrap;
   max-width: ${({ theme }) => theme.breakpoints.bigDesktop}px;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Section, CardsWrapper } from "./Room.css";
+import { Wrapper, CardsWrapper } from "./Room.css";
 import { RoomHeader, RoomCard, AddNewDevice } from "components";
 const Room = ({
   card,
@@ -16,7 +16,7 @@ const Room = ({
   ];
 
   return (
-    <Section>
+    <Wrapper>
       <RoomHeader
         cardTitleId={card.id}
         title={card.title}
@@ -46,7 +46,7 @@ const Room = ({
           />
         )}
       </CardsWrapper>
-    </Section>
+    </Wrapper>
   );
 };
 RoomCard.propTypes = {
