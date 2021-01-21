@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/main.77972866.chunk.js",
-    "main.js.map": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/main.77972866.chunk.js.map",
-    "runtime-main.js": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/runtime-main.f489ca86.js",
-    "runtime-main.js.map": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/runtime-main.f489ca86.js.map",
-    "static/js/2.90c383c1.chunk.js": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/2.90c383c1.chunk.js",
-    "static/js/2.90c383c1.chunk.js.map": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/2.90c383c1.chunk.js.map",
-    "static/js/3.1cc8a88a.chunk.js": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/3.1cc8a88a.chunk.js",
-    "static/js/3.1cc8a88a.chunk.js.map": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/3.1cc8a88a.chunk.js.map",
+    "main.js": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/main.7b12fa2d.chunk.js",
+    "main.js.map": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/main.7b12fa2d.chunk.js.map",
+    "runtime-main.js": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/runtime-main.e11c1379.js",
+    "runtime-main.js.map": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/runtime-main.e11c1379.js.map",
+    "static/js/2.40686949.chunk.js": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/2.40686949.chunk.js",
+    "static/js/2.40686949.chunk.js.map": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/2.40686949.chunk.js.map",
+    "static/js/3.7b530500.chunk.js": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/3.7b530500.chunk.js",
+    "static/js/3.7b530500.chunk.js.map": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/3.7b530500.chunk.js.map",
     "index.html": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/index.html",
-    "static/js/2.90c383c1.chunk.js.LICENSE.txt": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/2.90c383c1.chunk.js.LICENSE.txt",
+    "static/js/2.40686949.chunk.js.LICENSE.txt": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/js/2.40686949.chunk.js.LICENSE.txt",
     "static/media/profile-image.2bc577d3.jpg": "/WojciechxFalkowski/move-closer-zadanie-rekrutacyjne/static/media/profile-image.2bc577d3.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f489ca86.js",
-    "static/js/2.90c383c1.chunk.js",
-    "static/js/main.77972866.chunk.js"
+    "static/js/runtime-main.e11c1379.js",
+    "static/js/2.40686949.chunk.js",
+    "static/js/main.7b12fa2d.chunk.js"
   ]
 }
